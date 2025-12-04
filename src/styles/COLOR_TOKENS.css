@@ -1,0 +1,506 @@
+/* =============================================================================
+   COLOR TOKENS - Pomodoro Pro Design System
+   ============================================================================= */
+
+/**
+ * PALETA DE CORES - Tokens CSS
+ * Estes tokens podem ser importados e utilizados em todo o projeto
+ * para manter consistência visual
+ */
+
+:root {
+  /* ========================================
+     CORES PRIMÁRIAS
+     ======================================== */
+  
+  /* Gradiente Principal (Navbar & Headers) */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-primary-start: #667eea;
+  --gradient-primary-end: #764ba2;
+  
+  /* Cor Primária - Foco */
+  --color-primary: #1976d2;
+  --color-primary-rgb: 25, 118, 210;
+  --color-primary-light: #e3f2fd;
+  --color-primary-dark: #1565c0;
+  
+  /* Cor de Sucesso - Pausa Curta */
+  --color-success: #388e3c;
+  --color-success-rgb: 56, 142, 60;
+  --color-success-light: #e8f5e9;
+  --color-success-dark: #2e7d32;
+  
+  /* Cor de Aviso - Pausa Longa */
+  --color-warning: #f57c00;
+  --color-warning-rgb: 245, 124, 0;
+  --color-warning-light: #fff3e0;
+  --color-warning-dark: #e65100;
+  
+  /* Cor de Erro */
+  --color-error: #d32f2f;
+  --color-error-rgb: 211, 47, 47;
+  --color-error-light: #ffebee;
+  --color-error-dark: #c62828;
+  
+  /* Cor de Conclusão */
+  --color-complete: #4caf50;
+  --color-complete-rgb: 76, 175, 80;
+  --color-complete-light: #f1f8e9;
+  --color-complete-dark: #388e3c;
+  
+  /* ========================================
+     CORES NEUTRAS
+     ======================================== */
+  
+  /* Backgrounds */
+  --color-bg-white: #ffffff;
+  --color-bg-light: #f5f5f5;
+  --color-bg-lighter: #fafafa;
+  --color-bg-card: #ffffff;
+  
+  /* Borders */
+  --color-border-light: #e0e0e0;
+  --color-border-lighter: #f0f0f0;
+  
+  /* Text */
+  --color-text-primary: #000000;
+  --color-text-secondary: #757575;
+  --color-text-disabled: #9e9e9e;
+  --color-text-inverse: #ffffff;
+  
+  /* ========================================
+     VARIAÇÕES POR TIPO DE SESSÃO
+     ======================================== */
+  
+  /* Foco */
+  --session-focus-color: var(--color-primary);
+  --session-focus-bg: var(--color-primary-light);
+  
+  /* Pausa Curta */
+  --session-short-break-color: var(--color-success);
+  --session-short-break-bg: var(--color-success-light);
+  
+  /* Pausa Longa */
+  --session-long-break-color: var(--color-warning);
+  --session-long-break-bg: var(--color-warning-light);
+  
+  /* ========================================
+     SOMBRAS
+     ======================================== */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* ========================================
+     OPACIDADES
+     ======================================== */
+  
+  --opacity-full: 1;
+  --opacity-hover: 0.8;
+  --opacity-disabled: 0.5;
+  --opacity-overlay: 0.9;
+}
+
+/* =============================================================================
+   CLASSE UTILITIES - Aplicar cores rapidamente
+   ============================================================================= */
+
+/* Gradientes */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+/* Cores Primárias */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+/* Cores de Sucesso */
+.text-success {
+  color: var(--color-success);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.bg-success-light {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+  border: 1px solid var(--color-success-light);
+}
+
+/* Cores de Aviso */
+.text-warning {
+  color: var(--color-warning);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+  color: white;
+}
+
+.bg-warning-light {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+/* Cores de Erro */
+.text-error {
+  color: var(--color-error);
+}
+
+.bg-error {
+  background-color: var(--color-error);
+  color: white;
+}
+
+/* Cores de Conclusão */
+.text-complete {
+  color: var(--color-complete);
+}
+
+.bg-complete {
+  background-color: var(--color-complete);
+  color: white;
+}
+
+.bg-complete-light {
+  background-color: var(--color-complete-light);
+  border: 2px solid var(--color-complete);
+}
+
+/* Backgrounds */
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+.bg-lighter {
+  background-color: var(--color-bg-lighter);
+}
+
+/* Borders */
+.border-light {
+  border-color: var(--color-border-light);
+}
+
+/* Text */
+.text-muted {
+  color: var(--color-text-secondary);
+}
+
+.text-disabled {
+  color: var(--color-text-disabled);
+  opacity: var(--opacity-disabled);
+}
+
+/* Sombras */
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+/* =============================================================================
+   COMPONENTES - Estilos de Referência
+   ============================================================================= */
+
+/* Button Primary */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  opacity: var(--opacity-hover);
+}
+
+.btn-primary:disabled {
+  background-color: var(--color-text-disabled);
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+/* Button Success */
+.btn-success {
+  background-color: var(--color-success);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: var(--color-success-dark);
+  opacity: var(--opacity-hover);
+}
+
+/* Button Warning */
+.btn-warning {
+  background-color: var(--color-warning);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: var(--color-warning-dark);
+  opacity: var(--opacity-hover);
+}
+
+/* Button Error */
+.btn-error {
+  background-color: var(--color-error);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-error:hover {
+  background-color: var(--color-error-dark);
+  opacity: var(--opacity-hover);
+}
+
+/* Button Outlined */
+.btn-outlined {
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: 10px 24px;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outlined:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-dark);
+}
+
+/* Card */
+.card {
+  background-color: var(--color-bg-card);
+  border-radius: 4px;
+  box-shadow: var(--shadow-md);
+  padding: 16px;
+}
+
+.card-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border-light);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.card-body {
+  padding: 16px;
+  color: var(--color-text-primary);
+}
+
+.card-footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-border-light);
+  background-color: var(--color-bg-light);
+}
+
+/* Alert */
+.alert {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  margin-bottom: 16px;
+}
+
+.alert-success {
+  background-color: var(--color-complete-light);
+  color: var(--color-complete);
+  border-color: var(--color-complete);
+}
+
+.alert-error {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.alert-warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+.alert-info {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Input */
+.input {
+  padding: 12px;
+  border: 2px solid var(--color-border-light);
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+}
+
+.input:disabled {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-primary {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.badge-success {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.badge-warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.badge-error {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+}
+
+/* =============================================================================
+   VARIÁVEIS DE MODO ESCURO (Dark Mode)
+   Para implementação futura
+   ============================================================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-white: #121212;
+    --color-bg-light: #1e1e1e;
+    --color-bg-lighter: #2a2a2a;
+    --color-bg-card: #1e1e1e;
+    
+    --color-border-light: #424242;
+    --color-border-lighter: #383838;
+    
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #bdbdbd;
+    --color-text-disabled: #666666;
+  }
+}
+
+/* =============================================================================
+   GRADIENTES ADICIONAIS
+   ============================================================================= */
+
+.gradient-focus {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+}
+
+.gradient-success {
+  background: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-dark) 100%);
+  color: white;
+}
+
+.gradient-warning {
+  background: linear-gradient(135deg, var(--color-warning) 0%, var(--color-warning-dark) 100%);
+  color: white;
+}
+
+/* =============================================================================
+   ACESSIBILIDADE
+   ============================================================================= */
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  .btn-primary,
+  .btn-success,
+  .btn-warning,
+  .btn-error {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary,
+  .btn-success,
+  .btn-warning,
+  .btn-error,
+  .input {
+    transition: none;
+  }
+}
+
+/* Focus visible (keyboard navigation) */
+.btn-primary:focus-visible,
+.btn-success:focus-visible,
+.btn-warning:focus-visible,
+.btn-error:focus-visible,
+.input:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}

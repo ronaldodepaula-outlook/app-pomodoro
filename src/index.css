@@ -1,0 +1,4 @@
+/* Global stylesheet (Tailwind removed). Keep minimal reset to avoid layout break.
+	If you want no styling at all, leave this file empty. */
+html, body, #root { height: 100%; }
+body { margin: 0; background-color: transparent; }
