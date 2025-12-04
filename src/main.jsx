@@ -15,7 +15,7 @@ export default function Root() {
   return (
     <ThemeProvider theme={mode === 'light' ? lightTheme : darkTheme}>
       <CssBaseline />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>
         <App setMode={setMode} mode={mode} />
       </BrowserRouter>
     </ThemeProvider>
